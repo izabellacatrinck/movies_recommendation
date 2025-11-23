@@ -1,0 +1,23 @@
+[project]
+name = "movies_recommendation"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.116.2",
+    "matplotlib>=3.10.6",
+    "numpy>=2.3.3",
+    "pandas>=2.3.2",
+    "requests>=2.32.5",
+    "streamlit>=1.49.1",
+    "uvicorn[standard]",
+    "jupyter",
+    "jupyterlab",
+    "sqlalchemy>=2.0.44",
+    "scikit-learn>=1.7.2",
+    "psycopg2-binary>=2.9.11",
+    "state>=0.1.1.dev0",
+    "agno>=2.3.2",
+    "groq>=0.36.0",
+]
