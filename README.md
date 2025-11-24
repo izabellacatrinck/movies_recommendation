@@ -4,36 +4,49 @@ Um sistema completo de recomendação utilizando Filtragem Baseada em Conteúdo,
 
 ## EQUIPE:
 Caio Jorge da Cunha Queiroz — 2315310028
+
 Lucas Maciel Gomes — 2315310014
+
 Izabella de Lima Catrinck — 2315310033
 
 ## Principais Funcionalidades
 1. Recomendações Baseadas em Conteúdo (Content-Based)
+2. 
   Utiliza TF-IDF aplicado às informações textuais dos filmes (gêneros e sinopse).
+
   Calcula a similaridade por cosseno entre o perfil do usuário e os filmes do catálogo.
 
-2. Filtragem Colaborativa Item-Item
+3. Filtragem Colaborativa Item-Item
   Recomenda filmes com base em padrões de comportamento entre usuários.
+
   Mede similaridade entre filmes avaliados por usuários semelhantes.
 
-3. Catálogo de Filmes
+4. Catálogo de Filmes
   Lista de filmes para explorar.
+
   Possibilidade de avaliar filmes para melhorar o perfil.
 
-4. Agente Cinéfilo (Chat com IA)
+5. Agente Cinéfilo (Chat com IA)
   O usuário pode fazer perguntas sobre o sistema, dados, métricas e recomendações.
+
   Utiliza API Groq (necessário definir a chave em .env).
 
-5. Autenticação
+6. Autenticação
   Login e cadastro de usuários.
+
   Preferências salvas individualmente.
 
 ## Tecnologias Utilizadas
   FastAPI (endpoints REST para recomendações e dados)
+  
   Scikit-learn (TF-IDF, Similaridade do Cosseno)
+  
   Pandas (tratamento de dados)
+  
   NumPy
+  
   Streamlit
+  
   HTML/CSS básico para componentes customizados
 
 ## Infraestrutura
