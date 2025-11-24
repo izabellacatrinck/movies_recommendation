@@ -1,13 +1,13 @@
-Sistema de Recomendação de Filmes
+# Sistema de Recomendação de Filmes
 
 Um sistema completo de recomendação utilizando Filtragem Baseada em Conteúdo, Filtragem Colaborativa Item-Item, interface em Streamlit, backend em FastAPI, e um Agente Cinéfilo para interagir com os dados do sistema.
 
-EQUIPE:
+## EQUIPE:
 Caio Jorge da Cunha Queiroz — 2315310028
 Lucas Maciel Gomes — 2315310014
 Izabella de Lima Catrinck — 2315310033
 
-Principais Funcionalidades
+## Principais Funcionalidades
 1. Recomendações Baseadas em Conteúdo (Content-Based)
   Utiliza TF-IDF aplicado às informações textuais dos filmes (gêneros e sinopse).
   Calcula a similaridade por cosseno entre o perfil do usuário e os filmes do catálogo.
@@ -28,7 +28,7 @@ Principais Funcionalidades
   Login e cadastro de usuários.
   Preferências salvas individualmente.
 
-Tecnologias Utilizadas
+## Tecnologias Utilizadas
   FastAPI (endpoints REST para recomendações e dados)
   Scikit-learn (TF-IDF, Similaridade do Cosseno)
   Pandas (tratamento de dados)
@@ -36,12 +36,12 @@ Tecnologias Utilizadas
   Streamlit
   HTML/CSS básico para componentes customizados
 
-Infraestrutura
+## Infraestrutura
 Autenticação simples por sessão
 Agente de IA usando Groq API
 uv / pip para gerenciamento de dependências
 
-Estrutura dos Dados
+## Estrutura dos Dados
 1. ratings_final_df.csv (avaliações dos usuários)
 Coluna	Descrição
 userId	Identificador único do usuário
@@ -49,9 +49,8 @@ movieId	Identificador único do filme
 rating	Nota do filme (1 a 5) atribuída pelo usuário
 Estatísticas
 
-👥 Usuários únicos: 317
-
-🎬 Filmes avaliados: 356
+### Usuários únicos: 317
+### Filmes avaliados: 356
 
 2. movies_final_df.csv (catálogo de filmes)
 Coluna	Descrição
@@ -69,21 +68,15 @@ vote_average	Média de votos
 vote_count	Número de votos
 content	Campo final concatenado (gêneros + sinopse + tags), utilizado no TF-IDF
 
-* Pipeline do Sistema
+## Pipeline do Sistema
 1. Pré-processamento
 
-Remoção de stopwords
-
-Normalização do texto
-
-Construção da coluna content com:
-
-gêneros + overview + tagline + studios + outras features textuais
+Remoção de stopwords;
+Normalização do texto;
+Construção da coluna content com: gêneros + overview + tagline + studios + outras features textuais
 
 2. Vetorização
-
 Modelo: TF-IDF (Term Frequency–Inverse Document Frequency)
-
 Hyperparams comuns:
 
 ngram_range = (1,2)
@@ -91,23 +84,18 @@ max_features = 5000
 stop_words = 'english'
 
 3. Perfil do Usuário
-
 Perfil = média dos vetores TF-IDF dos filmes avaliados positivamente.
 
 4. Cálculo da Similaridade
-
 Métrica: Cosine Similarity
-
 Retorna top-K filmes mais similares ao perfil.
 
 5. Filtragem Colaborativa
 
 Similaridade entre itens por correlação de notas.
-
 Recomendação baseada em filmes "vizinhos" ao já avaliado.
 
-Métricas de Avaliação
-
+## Métricas de Avaliação
 Usamos Precision, Recall e F1-Score para medir a qualidade das recomendações.
 
 🔹 Precision (Precisão)
@@ -161,7 +149,7 @@ Bom quando está entre 0.40 e 0.55
 
 Excelente se > 0.60
 
-Como Executar o Sistema
+## Como Executar o Sistema
 1. Instalar uv
 pip install uv
 
