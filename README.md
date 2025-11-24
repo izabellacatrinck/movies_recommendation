@@ -5,9 +5,9 @@ Um sistema completo de recomendação utilizando Filtragem Baseada em Conteúdo,
 ## EQUIPE:
 Caio Jorge da Cunha Queiroz — 2315310028
 
-Lucas Maciel Gomes — 2315310014
-
 Izabella de Lima Catrinck — 2315310033
+
+Lucas Maciel Gomes — 2315310014
 
 ## Principais Funcionalidades
 1. Recomendações Baseadas em Conteúdo (Content-Based)
@@ -51,34 +51,52 @@ Izabella de Lima Catrinck — 2315310033
 
 ## Infraestrutura
 Autenticação simples por sessão
+
 Agente de IA usando Groq API
+
 uv / pip para gerenciamento de dependências
 
 ## Estrutura dos Dados
 1. ratings_final_df.csv (avaliações dos usuários)
+
 Coluna	Descrição
+
 userId	Identificador único do usuário
+
 movieId	Identificador único do filme
+
 rating	Nota do filme (1 a 5) atribuída pelo usuário
-Estatísticas
 
 ### Usuários únicos: 317
 ### Filmes avaliados: 356
 
 2. movies_final_df.csv (catálogo de filmes)
 Coluna	Descrição
+
 id	ID do filme (equivalente a movieId)
+
 title	Título original
+
 genres	Gêneros brutos
+
 genres_clean	Gêneros tratados (lista limpa)
+
 overview	Sinopse
+
 production_companies	Estúdios
+
 companies_text	Estúdios tratados em texto
+
 tagline	Frase de impacto
+
 popularity	Métrica de popularidade
+
 release_date	Data de lançamento
+
 vote_average	Média de votos
+
 vote_count	Número de votos
+
 content	Campo final concatenado (gêneros + sinopse + tags), utilizado no TF-IDF
 
 ## Pipeline do Sistema
@@ -90,9 +108,12 @@ Construção da coluna content com: gêneros + overview + tagline + studios + ou
 
 2. Vetorização
 Modelo: TF-IDF (Term Frequency–Inverse Document Frequency)
+
 Hyperparams comuns:
 
 ngram_range = (1,2)
+
+
 max_features = 5000
 stop_words = 'english'
 
