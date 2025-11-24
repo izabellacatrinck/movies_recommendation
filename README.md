@@ -11,27 +11,27 @@ Izabella de Lima Catrinck — 2315310033
 
 ## Principais Funcionalidades
 1. Recomendações Baseadas em Conteúdo (Content-Based)
-2. 
+
   Utiliza TF-IDF aplicado às informações textuais dos filmes (gêneros e sinopse).
 
   Calcula a similaridade por cosseno entre o perfil do usuário e os filmes do catálogo.
 
-3. Filtragem Colaborativa Item-Item
+2. Filtragem Colaborativa Item-Item
   Recomenda filmes com base em padrões de comportamento entre usuários.
 
   Mede similaridade entre filmes avaliados por usuários semelhantes.
 
-4. Catálogo de Filmes
+3. Catálogo de Filmes
   Lista de filmes para explorar.
 
   Possibilidade de avaliar filmes para melhorar o perfil.
 
-5. Agente Cinéfilo (Chat com IA)
+4. Agente Cinéfilo (Chat com IA)
   O usuário pode fazer perguntas sobre o sistema, dados, métricas e recomendações.
 
   Utiliza API Groq (necessário definir a chave em .env).
 
-6. Autenticação
+5. Autenticação
   Login e cadastro de usuários.
 
   Preferências salvas individualmente.
