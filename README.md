@@ -2,6 +2,9 @@
 
 Um sistema completo de recomendação utilizando Filtragem Baseada em Conteúdo, Filtragem Colaborativa Item-Item, interface em Streamlit, backend em FastAPI, e um Agente Cinéfilo para interagir com os dados do sistema.
 
+### Usuários únicos: 317
+### Filmes avaliados: 356
+
 ## EQUIPE:
 Caio Jorge da Cunha Queiroz — 2315310028
 
@@ -66,9 +69,6 @@ userId	Identificador único do usuário
 movieId	Identificador único do filme
 
 rating	Nota do filme (1 a 5) atribuída pelo usuário
-
-### Usuários únicos: 317
-### Filmes avaliados: 356
 
 2. movies_final_df.csv (catálogo de filmes)
 Coluna	Descrição
